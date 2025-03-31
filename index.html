@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Save the Date</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Helvetica, Arial, sans-serif;
+    }
+
+    .wrapper {
+      width: 90%;
+      max-width: 1280px;
+      aspect-ratio: 16 / 9;
+      position: relative;
+    }
+
+    .background {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    .title {
+      position: absolute;
+      top: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-size: clamp(14px, 5vw, 56px);
+      text-align: center;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+      font-weight: bold;
+      z-index: 3;
+      width: 90%;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
+
+    .button-wrapper {
+      grid-column: 1 / 2;
+      grid-row: 4 / 5;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      padding: 20px;
+    }
+
+    .button {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      text-decoration: none;
+      font-size: clamp(10px, 2.5vw, 22px);
+      padding: 0.8em 1.4em;
+      border-radius: 6px;
+      font-weight: normal;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <img src="filmpje.gif" alt="Save the Evening" class="background">
+    <div class="title">SAVE THE EVENING</div>
+    <div class="grid">
+      <div class="button-wrapper">
+        <a href="datum.ics" class="button" download>
+          klik en zet in je agenda
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
